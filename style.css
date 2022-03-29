@@ -1,0 +1,75 @@
+body {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJCyMsO83lYVVJwj0iP-DhHsaB6Xs1-NMF0A&usqp=CAU);
+}
+.head {
+    background-color: black;
+    width: 50px;
+    height: 50px;
+}
+.head::before {
+    content: "";
+    background-color: white;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 15px;
+    top: 10px;
+    animation-name: blink;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+.head::after {
+    content: "";
+    background-color: white;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    left: 35px;
+    top: 10px;
+    animation-name: blink;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+@keyframes blink {
+    10% {
+        background-color: black;
+    }
+    20% {
+        background-color: white;
+    }
+}
+.controls {
+    position: absolute;
+    bottom: 10px;
+    background-color: white;
+    width: 185px;
+    height: 50px;
+}
+button {
+    background-color: lightblue;
+}
+.warning {
+    opacity: 0%;
+}
+@media (max-width: 1380px) {
+    .warning {
+        opacity: 100%;
+    }
+    .vanish {
+        opacity: 0%;
+    }
+    .vanishe {
+        opacity: 0%;
+    }			
+}
+@media (max-height: 650px) {
+    .warning {
+        opacity: 100%;
+    }
+    .vanish {
+        opacity: 0%;
+    }
+    .vanishe {
+        opacity: 0%;
+    }			
+}
